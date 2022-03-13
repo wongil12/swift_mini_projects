@@ -1,2 +1,7 @@
-# swift_mini_projects
-Swift 작은 프로젝트들 모으는 용
+# IOS 개발 프로젝트들
+
+#### 1. TodoList
+- [ ] 완료
+> Start Date: `2022-03-13`
+> 오늘 할 일을 작성해놓는 어플리케이션
+---
