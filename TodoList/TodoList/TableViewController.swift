@@ -10,9 +10,17 @@ import UIKit
 var todoLists = ["끝장나게 밥 먹기", "끝장나게 물 마시기", "끝장나게 씻기", "죽여주게 잠자기"]
 
 class TableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 오늘 날짜 yyyy-MM-dd 형식으로 변환 후 타이틀 세팅
+        let nowDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let convertDate = dateFormatter.string(from: nowDate)
+        
+        self.title = convertDate
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
