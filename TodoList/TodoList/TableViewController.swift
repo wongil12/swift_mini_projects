@@ -8,12 +8,17 @@
 import UIKit
 
 var todoLists = ["끝장나게 밥 먹기", "끝장나게 물 마시기", "끝장나게 씻기", "죽여주게 잠자기"]
+var completeList: [Bool] = []
 
 class TableViewController: UITableViewController {
     @IBOutlet var tblTodo: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for _ in todoLists {
+            completeList.append(false)
+        }
         
         // 오늘 날짜 yyyy-MM-dd 형식으로 변환 후 타이틀 세팅
         let nowDate = Date()
@@ -50,7 +55,18 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
         
-        cell.textLabel?.text = todoLists[indexPath.row]
+        if completeList[indexPath.row] {
+            let attributeText = NSMutableAttributedString(string: todoLists[indexPath.row])
+
+            attributeText.addAttribute(.strikethroughStyle,
+                                            value: NSUnderlineStyle.single.rawValue,
+                                            range: NSMakeRange(0, attributeText.length))
+            
+            cell.textLabel?.attributedText = attributeText
+        } else {
+            cell.textLabel?.text = todoLists[indexPath.row]
+        }
+        
         return cell
     }
 

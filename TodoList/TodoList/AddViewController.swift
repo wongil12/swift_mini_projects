@@ -19,6 +19,7 @@ class AddViewController: UIViewController {
     // Add Button 클릭 시 todoLists에 작성한 todo 넣어주고 전 화면으로 전환
     @IBAction func btnAddTodo(_ sender: UIButton) {
         todoLists.append(txtTodoField.text!)
+        completeList.append(false)
         _ = navigationController?.popViewController(animated: true)
     }
     
