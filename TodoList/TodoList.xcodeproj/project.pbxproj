@@ -13,6 +13,7 @@
 		76B533ED27DE33F5003F289A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B533EC27DE33F5003F289A /* Assets.xcassets */; };
 		76B533F027DE33F5003F289A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B533EE27DE33F5003F289A /* LaunchScreen.storyboard */; };
 		76B533FC27DF7542003F289A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B533FB27DF7542003F289A /* TableViewController.swift */; };
+		76B533FE27E0D0DD003F289A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B533FD27E0D0DD003F289A /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		76B533EF27DE33F5003F289A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76B533F127DE33F5003F289A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76B533FB27DF7542003F289A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		76B533FD27E0D0DD003F289A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				76B533E527DE33F0003F289A /* SceneDelegate.swift */,
 				76B533E927DE33F0003F289A /* Main.storyboard */,
 				76B533FB27DF7542003F289A /* TableViewController.swift */,
+				76B533FD27E0D0DD003F289A /* AddViewController.swift */,
 				76B533EC27DE33F5003F289A /* Assets.xcassets */,
 				76B533EE27DE33F5003F289A /* LaunchScreen.storyboard */,
 				76B533F127DE33F5003F289A /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				76B533E427DE33F0003F289A /* AppDelegate.swift in Sources */,
 				76B533FC27DF7542003F289A /* TableViewController.swift in Sources */,
+				76B533FE27E0D0DD003F289A /* AddViewController.swift in Sources */,
 				76B533E627DE33F0003F289A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

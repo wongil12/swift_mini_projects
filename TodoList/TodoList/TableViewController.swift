@@ -10,6 +10,7 @@ import UIKit
 var todoLists = ["끝장나게 밥 먹기", "끝장나게 물 마시기", "끝장나게 씻기", "죽여주게 잠자기"]
 
 class TableViewController: UITableViewController {
+    @IBOutlet var tblTodo: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,11 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    // 테이블 뷰가 화면에 보일 때 테이블 뷰 데이터 reload
+    override func viewWillAppear(_ animated: Bool) {
+        tblTodo.reloadData()
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
