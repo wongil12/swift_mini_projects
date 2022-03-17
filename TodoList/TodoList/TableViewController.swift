@@ -31,8 +31,8 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // 왼쪽 상단에 Edit 버튼 추가
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -92,12 +92,12 @@ class TableViewController: UITableViewController {
         }
     }
 
-    /*
-    // Override to support rearranging the table view.
+    // table cell 이동 함수
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let todoToItem = todoLists[fromIndexPath.row]
+        todoLists.remove(at: fromIndexPath.row)
+        todoLists.insert(todoToItem, at: to.row)
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
