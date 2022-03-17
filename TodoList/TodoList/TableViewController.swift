@@ -66,8 +66,11 @@ class TableViewController: UITableViewController {
         } else {
             cell.textLabel?.text = todoLists[indexPath.row]
         }
-        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Delete"
     }
 
     /*
@@ -78,17 +81,16 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+    // table cell을 왼쪽으로 밀었을 때 셀 삭제 버튼 이벤트
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            todoLists.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
