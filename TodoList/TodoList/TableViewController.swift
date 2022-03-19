@@ -16,9 +16,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for _ in todoLists {
-            completeList.append(false)
-        }
         // 오늘 날짜 yyyy-MM-dd 형식으로 변환 후 타이틀 세팅
         let nowDate = Date()
         let dateFormatter = DateFormatter()
@@ -32,19 +29,15 @@ class TableViewController: UITableViewController {
 
         // 왼쪽 상단에 Edit 버튼 추가
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        
-        fetch()
-    }
-    
-    func fetch() {
-        let data: [Todos] = TodoDataManager.shared.getTodos()
-        print(data)
     }
 
     // MARK: - Table view data source
     
     // 테이블 뷰가 화면에 보일 때 테이블 뷰 데이터 reload
     override func viewWillAppear(_ animated: Bool) {
+        // Core Data에서 데이터 다시 가져오기
+        TodoDataManager.shared.getTodos()
+        
         tblTodo.reloadData()
     }
 
@@ -53,14 +46,14 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoLists.count
+        return TodoDataManager.shared.list.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
-        
+        /*
         if completeList[indexPath.row] {
-            let attributeText = NSMutableAttributedString(string: todoLists[indexPath.row])
+            let attributeText = NSMutableAttributedString(string: TodoDataManager.shared.list[indexPath.row].title!)
 
             attributeText.addAttribute(.strikethroughStyle,
                                             value: NSUnderlineStyle.single.rawValue,
@@ -68,8 +61,10 @@ class TableViewController: UITableViewController {
             
             cell.textLabel?.attributedText = attributeText
         } else {
-            cell.textLabel?.text = todoLists[indexPath.row]
+            cell.textLabel?.text = TodoDataManager.shared.list[indexPath.row].title!
         }
+         */
+        cell.textLabel?.text = TodoDataManager.shared.list[indexPath.row].title!
         return cell
     }
     
