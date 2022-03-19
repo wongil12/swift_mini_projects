@@ -14,6 +14,10 @@
 		76B533F027DE33F5003F289A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B533EE27DE33F5003F289A /* LaunchScreen.storyboard */; };
 		76B533FC27DF7542003F289A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B533FB27DF7542003F289A /* TableViewController.swift */; };
 		76B533FE27E0D0DD003F289A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B533FD27E0D0DD003F289A /* AddViewController.swift */; };
+		76B5340127E60317003F289A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76B533FF27E60317003F289A /* Model.xcdatamodeld */; };
+		76B5340827E60655003F289A /* Todos+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5340627E60655003F289A /* Todos+CoreDataClass.swift */; };
+		76B5340927E60655003F289A /* Todos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5340727E60655003F289A /* Todos+CoreDataProperties.swift */; };
+		76B5340B27E60857003F289A /* TodoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5340A27E60857003F289A /* TodoDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		76B533F127DE33F5003F289A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76B533FB27DF7542003F289A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		76B533FD27E0D0DD003F289A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		76B5340027E60317003F289A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		76B5340627E60655003F289A /* Todos+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todos+CoreDataClass.swift"; sourceTree = "<group>"; };
+		76B5340727E60655003F289A /* Todos+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todos+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		76B5340A27E60857003F289A /* TodoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,8 @@
 		76B533D727DE33F0003F289A = {
 			isa = PBXGroup;
 			children = (
+				76B5340627E60655003F289A /* Todos+CoreDataClass.swift */,
+				76B5340727E60655003F289A /* Todos+CoreDataProperties.swift */,
 				76B533E227DE33F0003F289A /* TodoList */,
 				76B533E127DE33F0003F289A /* Products */,
 			);
@@ -59,9 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				76B533E327DE33F0003F289A /* AppDelegate.swift */,
+				76B5340A27E60857003F289A /* TodoDataManager.swift */,
 				76B533E527DE33F0003F289A /* SceneDelegate.swift */,
 				76B533E927DE33F0003F289A /* Main.storyboard */,
 				76B533FB27DF7542003F289A /* TableViewController.swift */,
+				76B533FF27E60317003F289A /* Model.xcdatamodeld */,
 				76B533FD27E0D0DD003F289A /* AddViewController.swift */,
 				76B533EC27DE33F5003F289A /* Assets.xcassets */,
 				76B533EE27DE33F5003F289A /* LaunchScreen.storyboard */,
@@ -142,7 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B533E427DE33F0003F289A /* AppDelegate.swift in Sources */,
+				76B5340927E60655003F289A /* Todos+CoreDataProperties.swift in Sources */,
 				76B533FC27DF7542003F289A /* TableViewController.swift in Sources */,
+				76B5340B27E60857003F289A /* TodoDataManager.swift in Sources */,
+				76B5340127E60317003F289A /* Model.xcdatamodeld in Sources */,
+				76B5340827E60655003F289A /* Todos+CoreDataClass.swift in Sources */,
 				76B533FE27E0D0DD003F289A /* AddViewController.swift in Sources */,
 				76B533E627DE33F0003F289A /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76B533FF27E60317003F289A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76B5340027E60317003F289A /* Model.xcdatamodel */,
+			);
+			currentVersion = 76B5340027E60317003F289A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 76B533D827DE33F0003F289A /* Project object */;
 }

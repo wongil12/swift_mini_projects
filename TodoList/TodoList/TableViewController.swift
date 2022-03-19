@@ -34,6 +34,12 @@ class TableViewController: UITableViewController {
         // 왼쪽 상단에 Edit 버튼 추가
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
+    
+    func fetch() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        
+    }
 
     // MARK: - Table view data source
     
@@ -43,12 +49,10 @@ class TableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return todoLists.count
     }
 
