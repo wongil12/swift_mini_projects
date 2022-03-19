@@ -19,7 +19,6 @@ class TableViewController: UITableViewController {
         for _ in todoLists {
             completeList.append(false)
         }
-        
         // 오늘 날짜 yyyy-MM-dd 형식으로 변환 후 타이틀 세팅
         let nowDate = Date()
         let dateFormatter = DateFormatter()
@@ -33,12 +32,13 @@ class TableViewController: UITableViewController {
 
         // 왼쪽 상단에 Edit 버튼 추가
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        fetch()
     }
     
     func fetch() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        
+        let data: [Todos] = TodoDataManager.shared.getTodos()
+        print(data)
     }
 
     // MARK: - Table view data source
