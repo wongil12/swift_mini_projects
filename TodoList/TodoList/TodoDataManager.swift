@@ -57,4 +57,17 @@ class TodoDataManager {
         }
     }
     
+    // Core Data에 Todo 데이터 제거하는 메서드
+    func deleteTodo(_ index: Int) {
+        if let context = context {
+            context.delete(list[index])
+            list.remove(at: index)
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Colud not delete: \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
 }
