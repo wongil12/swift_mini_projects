@@ -16,6 +16,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        TodoDataManager.shared.getTodos()
+        
         // 오늘 날짜 yyyy-MM-dd 형식으로 변환 후 타이틀 세팅
         let nowDate = Date()
         let dateFormatter = DateFormatter()
@@ -37,7 +39,6 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Core Data에서 데이터 다시 가져오기
         TodoDataManager.shared.getTodos()
-        
         tblTodo.reloadData()
     }
 

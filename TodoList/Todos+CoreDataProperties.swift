@@ -19,6 +19,7 @@ extension Todos {
     @NSManaged public var title: String?
     @NSManaged public var idx: Int16
     @NSManaged public var order: Int16
+    @NSManaged public var date: String?
 
 }
 

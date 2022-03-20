@@ -17,6 +17,26 @@ class TodoDataManager {
     
     let modelName: String = "Todos"
     
+    // 오늘 날짜가 아닌 리스트는 제거
+    func updateList() {
+        let nowDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let convertDate = dateFormatter.string(from: nowDate)
+        
+        if let context = context {
+            let invalidList = self.list.filter({ (item) -> Bool in item.date != convertDate })
+            for item in invalidList {
+                context.delete(item)
+            }
+            do {
+                try context.save()
+            } catch {
+                print("Colud not update list")
+            }
+        }
+    }
+    
     // Core Data에 저장된 Todo 데이터 가져오는 메서드
     func getTodos() {
         if let context = context {
@@ -62,8 +82,8 @@ class TodoDataManager {
     // Core Data에 Todo 데이터 제거하는 메서드
     func deleteTodo(_ index: Int) {
         if let context = context {
-            context.delete(list[index])
-            list.remove(at: index)
+            context.delete(self.list[index])
+            self.list.remove(at: index)
             do {
                 try context.save()
             } catch let error as NSError {
