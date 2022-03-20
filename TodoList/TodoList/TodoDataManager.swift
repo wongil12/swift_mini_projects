@@ -20,7 +20,9 @@ class TodoDataManager {
     // Core Data에 저장된 Todo 데이터 가져오는 메서드
     func getTodos() {
         if let context = context {
+            let sortDpt: NSSortDescriptor = NSSortDescriptor(key: "order", ascending: false)
             let fetchRequest: NSFetchRequest<NSManagedObject> = NSFetchRequest<NSManagedObject>(entityName: modelName)
+            fetchRequest.sortDescriptors = [sortDpt]
             
             do {
                 if let fetchResult: [Todos] = try context.fetch(fetchRequest) as? [Todos] {
@@ -70,4 +72,17 @@ class TodoDataManager {
         }
     }
     
+    // Core Data 순서 변경
+    func moveRowTodo(fromIndex fIndex: Int, toIndex tIndex: Int) {
+        let toOrder = self.list[tIndex].order
+        self.list[tIndex].order = self.list[fIndex].order
+        self.list[fIndex].order = toOrder
+        if let context = context {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Colud not move row: \(error), \(error.userInfo)")
+            }
+        }
+    }
 }

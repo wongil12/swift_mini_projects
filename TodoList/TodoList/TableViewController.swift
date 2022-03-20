@@ -93,9 +93,7 @@ class TableViewController: UITableViewController {
 
     // table cell 이동 함수
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let todoToItem = todoLists[fromIndexPath.row]
-        todoLists.remove(at: fromIndexPath.row)
-        todoLists.insert(todoToItem, at: to.row)
+        TodoDataManager.shared.moveRowTodo(fromIndex: fromIndexPath.row, toIndex: to.row)
     }
 
     /*
