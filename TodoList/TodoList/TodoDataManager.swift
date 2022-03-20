@@ -36,7 +36,18 @@ class TodoDataManager {
     func saveTodo(_ text: String) {
         if let context = context, let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: modelName, in: context) {
             if let todo: Todos = NSManagedObject(entity: entity, insertInto: context) as? Todos {
+                
+                // idx와 order 채번
+                let maxIdx = self.list.map( {(value: Todos) -> Int in Int(value.idx)} ).max()
+                let maxOrder = self.list.map( {(value: Todos ) -> Int in Int(value.order)} ).max()
+                
+                let idx = maxIdx == nil ? 1 : maxIdx! + 1
+                let order = maxOrder == nil ? 1 : maxOrder! + 1
+                
                 todo.setValue(text, forKey: "title")
+                todo.setValue(idx, forKey: "idx")
+                todo.setValue(order, forKey: "order")
+                
                 do {
                     try context.save()
                 } catch let error as NSError {
@@ -45,4 +56,5 @@ class TodoDataManager {
             }
         }
     }
+    
 }
