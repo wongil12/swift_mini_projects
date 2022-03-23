@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--세계 시계-->
         <scene sceneID="sgD-MU-m2S">
             <objects>
                 <tableViewController id="Mwq-tu-A7S" sceneMemberID="viewController">
@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="K9e-pv-j9M">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="le9-bE-f7p">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9e-pv-j9M" id="fcp-yk-0yX">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="le9-bE-f7p" id="kbu-1X-VwJ">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="Mwq-tu-A7S" id="7ms-9Q-87A"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="xc2-zH-17m"/>
+                    <tabBarItem key="tabBarItem" title="세계 시계" image="network" catalog="system" id="xc2-zH-17m"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofg-Xs-fhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="104.46428571428571"/>
         </scene>
-        <!--Table View Controller-->
+        <!--알람-->
         <scene sceneID="ubX-y5-d1N">
             <objects>
                 <tableViewController id="KFT-Eu-qvD" sceneMemberID="viewController">
@@ -80,13 +80,13 @@
                             <outlet property="delegate" destination="KFT-Eu-qvD" id="MY3-UN-eHO"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Cym-km-Za5"/>
+                    <tabBarItem key="tabBarItem" title="알람" image="alarm.fill" catalog="system" id="Cym-km-Za5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDh-Vz-B7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="-1"/>
         </scene>
-        <!--View Controller-->
+        <!--스톱워치-->
         <scene sceneID="9yP-Dw-MIr">
             <objects>
                 <viewController id="i1C-Th-3fS" sceneMemberID="viewController">
@@ -96,13 +96,13 @@
                         <viewLayoutGuide key="safeArea" id="1DY-MO-SCg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="Tho-kr-Thd"/>
+                    <tabBarItem key="tabBarItem" title="스톱워치" image="stopwatch.fill" catalog="system" id="Tho-kr-Thd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdC-73-3hL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="713"/>
         </scene>
-        <!--View Controller-->
+        <!--타이머-->
         <scene sceneID="B6E-jT-B6d">
             <objects>
                 <viewController id="igT-2H-u0P" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="Xa7-3u-Y0t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="Bq5-EI-IBk"/>
+                    <tabBarItem key="tabBarItem" title="타이머" image="timer" catalog="system" id="Bq5-EI-IBk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg0-br-Cdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +120,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
+        <image name="network" catalog="system" width="128" height="121"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
