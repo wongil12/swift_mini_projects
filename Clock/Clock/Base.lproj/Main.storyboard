@@ -17,13 +17,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="le9-bE-f7p">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorldTimeTableViewCell" rowHeight="100" id="le9-bE-f7p" customClass="WorldTimeTableViewCell" customModule="Clock" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="le9-bE-f7p" id="kbu-1X-VwJ">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-Ue-DzB">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-1K-jj9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6au-57-Q64">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WQ-Rm-rdn">
+                                                            <rect key="frame" x="0.0" y="50" width="61.666666666666664" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j75-Oq-h5G">
+                                                    <rect key="frame" x="61.666666666666657" y="0.0" width="366.33333333333337" height="100"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="A7Q-Ue-DzB" secondAttribute="bottom" id="IXo-hZ-ie0"/>
+                                        <constraint firstAttribute="trailing" secondItem="A7Q-Ue-DzB" secondAttribute="trailing" id="TGa-BU-lvE"/>
+                                        <constraint firstItem="A7Q-Ue-DzB" firstAttribute="top" secondItem="kbu-1X-VwJ" secondAttribute="top" id="cTm-M2-xLO"/>
+                                        <constraint firstItem="A7Q-Ue-DzB" firstAttribute="leading" secondItem="kbu-1X-VwJ" secondAttribute="leading" id="fQQ-im-4lf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblArea" destination="4WQ-Rm-rdn" id="xIv-C2-sXm"/>
+                                    <outlet property="lblDiffTime" destination="6au-57-Q64" id="AgQ-gr-bCb"/>
+                                    <outlet property="lblTime" destination="j75-Oq-h5G" id="kYn-wv-s2y"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,10 +73,62 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="세계 시계" image="network" catalog="system" id="xc2-zH-17m"/>
+                    <navigationItem key="navigationItem" id="o2n-9h-UI9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5bB-6I-Pom">
+                            <connections>
+                                <segue destination="fl6-M6-0bv" kind="showDetail" id="qTU-fk-ZS3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofg-Xs-fhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1027.5700934579438" y="-699.13606911447084"/>
+            <point key="canvasLocation" x="-1942.9906542056074" y="937.5809935205184"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="zIS-ky-NJH">
+            <objects>
+                <tableViewController id="fl6-M6-0bv" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Akj-gl-f0c">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e9E-nr-Kul">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9E-nr-Kul" id="6YH-xu-OZ4">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fl6-M6-0bv" id="VNt-ZE-XkQ"/>
+                            <outlet property="delegate" destination="fl6-M6-0bv" id="bj3-hE-xTX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1S-9P-1SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="938"/>
+        </scene>
+        <!--세계 시계-->
+        <scene sceneID="squ-bc-BO5">
+            <objects>
+                <navigationController id="Brr-me-ev7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="세계 시계" image="network" catalog="system" id="dNP-xt-53C"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ho3-K6-0cr">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mwq-tu-A7S" kind="relationship" relationship="rootViewController" id="InJ-lK-A86"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBz-7r-Z1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1236" y="65"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NQU-Kh-1aZ">
@@ -47,7 +140,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Mwq-tu-A7S" kind="relationship" relationship="viewControllers" id="P4G-JC-Nhh"/>
+                        <segue destination="Brr-me-ev7" kind="relationship" relationship="viewControllers" id="UJ7-1L-7DM"/>
                         <segue destination="KFT-Eu-qvD" kind="relationship" relationship="viewControllers" id="2Bi-PY-EMw"/>
                         <segue destination="i1C-Th-3fS" kind="relationship" relationship="viewControllers" id="MTT-W2-7Ki"/>
                         <segue destination="igT-2H-u0P" kind="relationship" relationship="viewControllers" id="Ozz-7C-vmF"/>
@@ -55,7 +148,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNy-mT-yA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="104.46428571428571"/>
+            <point key="canvasLocation" x="212" y="-824"/>
         </scene>
         <!--알람-->
         <scene sceneID="ubX-y5-d1N">
@@ -84,7 +177,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDh-Vz-B7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="-1"/>
+            <point key="canvasLocation" x="-207" y="65"/>
         </scene>
         <!--스톱워치-->
         <scene sceneID="9yP-Dw-MIr">
@@ -100,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdC-73-3hL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="713"/>
+            <point key="canvasLocation" x="934" y="65"/>
         </scene>
         <!--타이머-->
         <scene sceneID="B6E-jT-B6d">
@@ -116,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg0-br-Cdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="1459"/>
+            <point key="canvasLocation" x="1963" y="65"/>
         </scene>
     </scenes>
     <resources>
@@ -124,6 +217,9 @@
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

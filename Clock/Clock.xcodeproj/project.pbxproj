@@ -17,6 +17,7 @@
 		76B5343A27EAE5AA003F289A /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5343927EAE5AA003F289A /* AlarmViewController.swift */; };
 		76B5343C27EAE5DC003F289A /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5343B27EAE5DC003F289A /* StopWatchViewController.swift */; };
 		76B5343E27EB6722003F289A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5343D27EB6722003F289A /* TimerViewController.swift */; };
+		76B5344327ECB2D4003F289A /* WorldTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		76B5343927EAE5AA003F289A /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		76B5343B27EAE5DC003F289A /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		76B5343D27EB6722003F289A /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +66,14 @@
 		76B5341F27EA1771003F289A /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				76B5343727EAE581003F289A /* WorldTimeViewController.swift */,
 				76B5342027EA1771003F289A /* AppDelegate.swift */,
 				76B5342227EA1771003F289A /* SceneDelegate.swift */,
 				76B5342627EA1771003F289A /* Main.storyboard */,
+				76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */,
 				76B5343D27EB6722003F289A /* TimerViewController.swift */,
 				76B5343927EAE5AA003F289A /* AlarmViewController.swift */,
 				76B5343B27EAE5DC003F289A /* StopWatchViewController.swift */,
-				76B5343727EAE581003F289A /* WorldTimeViewController.swift */,
 				76B5342C27EA1776003F289A /* Assets.xcassets */,
 				76B5342E27EA1776003F289A /* LaunchScreen.storyboard */,
 				76B5343127EA1776003F289A /* Info.plist */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B5343A27EAE5AA003F289A /* AlarmViewController.swift in Sources */,
+				76B5344327ECB2D4003F289A /* WorldTimeTableViewCell.swift in Sources */,
 				76B5342127EA1771003F289A /* AppDelegate.swift in Sources */,
 				76B5342B27EA1771003F289A /* Clock.xcdatamodeld in Sources */,
 				76B5343E27EB6722003F289A /* TimerViewController.swift in Sources */,
