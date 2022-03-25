@@ -73,7 +73,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="세계 시계" image="network" catalog="system" id="xc2-zH-17m"/>
-                    <navigationItem key="navigationItem" id="o2n-9h-UI9">
+                    <navigationItem key="navigationItem" title="세계 시계" id="o2n-9h-UI9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5bB-6I-Pom">
                             <connections>
                                 <segue destination="fl6-M6-0bv" kind="showDetail" id="qTU-fk-ZS3"/>

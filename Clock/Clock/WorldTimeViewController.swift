@@ -16,6 +16,8 @@ class WorldTimeViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
