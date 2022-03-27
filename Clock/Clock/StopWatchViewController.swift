@@ -22,8 +22,8 @@ struct TimeSet {
 class StopWatchViewController: UIViewController {
     let timerSelector: Selector = #selector(StopWatchViewController.updateTimer)
     
-    @IBOutlet var btnControl: UIButton!
     @IBOutlet var btnLeft: UIButton!
+    @IBOutlet var btnControl: UIButton!
     
     @IBOutlet var lblMinute: UILabel!
     @IBOutlet var lblSecond: UILabel!
@@ -37,20 +37,27 @@ class StopWatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        btnControl.layer.cornerRadius = 40
+        btnLeft.layer.cornerRadius = 40
+        
+        changeControlBtn(.start)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func tchBtnControl(_ sender: UIButton) {
+        changeControlBtn(self.watchStatus)
         switch self.watchStatus {
         case .stop:
             self.watchStatus = .start
             self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: timerSelector, userInfo: nil, repeats: true)
+            btnControl.setTitle("중단", for: .normal)
             break
         case .start:
             self.watchStatus = .stop
             self.timer?.invalidate()
             self.timer = nil
+            btnControl.setTitle("시작", for: .normal)
             break
         }
     }
@@ -76,15 +83,19 @@ class StopWatchViewController: UIViewController {
         return timeSet
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func changeControlBtn (_ status: WatchStatus) {
+        switch status {
+        case .stop:
+            btnControl.setTitle("중단", for: .normal)
+            btnControl.backgroundColor = UIColor(red: 50/255, green: 14/255, blue: 11/255, alpha: 1)
+            btnControl.setTitleColor(UIColor(red: 255/255, green: 69/255, blue: 58/255, alpha: 1), for: .normal)
+            break
+        case .start:
+            btnControl.setTitle("시작", for: .normal)
+            btnControl.backgroundColor = UIColor(red: 8/255, green: 42/255, blue: 17/255, alpha: 1)
+            btnControl.setTitleColor(UIColor(red: 46/255, green: 209/255, blue: 88/255, alpha: 1), for: .normal)
+            break
+        }
     }
-    */
 
 }
