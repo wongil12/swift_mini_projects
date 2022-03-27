@@ -12,6 +12,12 @@ enum WatchStatus {
     case stop
 }
 
+enum LeftStatus {
+    case disable
+    case lab
+    case reset
+}
+
 struct TimeSet {
     var hour: String
     var minute: String
@@ -31,8 +37,8 @@ class StopWatchViewController: UIViewController {
     
     
     var watchStatus: WatchStatus = .stop
+    var leftStatus: LeftStatus = .disable
     var timer: Timer!
-    var startTime = Date()
     var accuTime: Double = 0
 
     override func viewDidLoad() {
@@ -42,22 +48,50 @@ class StopWatchViewController: UIViewController {
         btnLeft.layer.cornerRadius = 40
         
         changeControlBtn(.start)
+        changeLeftBtn(.disable)
         // Do any additional setup after loading the view.
     }
     
+    // 시작 / 중지 버튼 클릭 이벤트
     @IBAction func tchBtnControl(_ sender: UIButton) {
         changeControlBtn(self.watchStatus)
         switch self.watchStatus {
         case .stop:
             self.watchStatus = .start
             self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: timerSelector, userInfo: nil, repeats: true)
-            btnControl.setTitle("중단", for: .normal)
+            self.leftStatus = .lab
+            changeLeftBtn(self.leftStatus)
             break
         case .start:
             self.watchStatus = .stop
             self.timer?.invalidate()
             self.timer = nil
-            btnControl.setTitle("시작", for: .normal)
+            self.leftStatus = .reset
+            changeLeftBtn(self.leftStatus)
+            break
+        }
+    }
+    
+    // 랩 / 재설정 버튼 클릭 이벤트
+    @IBAction func tchBtnLeft(_ sender: UIButton) {
+        switch self.leftStatus {
+        case .lab:
+            break
+        case .reset:
+            self.watchStatus = .stop
+            self.leftStatus = .disable
+            
+            self.timer?.invalidate()
+            self.timer = nil
+            
+            self.accuTime = 0
+            
+            changeTimeLbl(formatTime(self.accuTime))
+            
+            changeControlBtn(.start)
+            changeLeftBtn(.disable)
+            break
+        case .disable:
             break
         }
     }
@@ -66,12 +100,10 @@ class StopWatchViewController: UIViewController {
         self.accuTime += 0.01
         
         let timeSet = formatTime(self.accuTime)
-        
-        lblMinute.text = timeSet.minute
-        lblSecond.text = timeSet.second
-        lblMiiliSecond.text = timeSet.milliSecond
+        changeTimeLbl(timeSet)
     }
     
+    // 초를 받아서 TimeSet으로 return 해주는 formatter
     func formatTime(_ time:Double) -> TimeSet {
         let hour = (Int)(fmod(time / 60 / 60, 12)) //시간 구하기
         let minute = (Int)(fmod(time / 60, 60)) // 분 구하기
@@ -83,6 +115,7 @@ class StopWatchViewController: UIViewController {
         return timeSet
     }
     
+    // 시작 / 중단 버튼 변경 함수
     func changeControlBtn (_ status: WatchStatus) {
         switch status {
         case .stop:
@@ -97,5 +130,34 @@ class StopWatchViewController: UIViewController {
             break
         }
     }
-
+    
+    // 재설정 / 랩 버튼 변경 함수
+    func changeLeftBtn (_ status: LeftStatus) {
+        btnLeft.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        switch status {
+        case .disable:
+            btnLeft.isEnabled = false
+            btnLeft.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.5)
+            btnLeft.setTitle("랩", for: .normal)
+            btnLeft.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.5), for: .normal)
+            break
+        case .lab:
+            btnLeft.isEnabled = true
+            btnLeft.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+            btnLeft.setTitle("랩", for: .normal)
+            break
+        case .reset:
+            btnLeft.isEnabled = true
+            btnLeft.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+            btnLeft.setTitle("재설정", for: .normal)
+            break
+        }
+    }
+    
+    // 타이머 화면 변경해주는 함수
+    func changeTimeLbl (_ timeSet: TimeSet) {
+        lblMinute.text = timeSet.minute
+        lblSecond.text = timeSet.second
+        lblMiiliSecond.text = timeSet.milliSecond
+    }
 }
