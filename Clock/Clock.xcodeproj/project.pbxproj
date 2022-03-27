@@ -19,6 +19,7 @@
 		76B5343E27EB6722003F289A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5343D27EB6722003F289A /* TimerViewController.swift */; };
 		76B5344327ECB2D4003F289A /* WorldTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */; };
 		76B5344727EEE7E3003F289A /* WorldTimeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5344627EEE7E3003F289A /* WorldTimeAddViewController.swift */; };
+		76B5344927F08C73003F289A /* StopWatchLabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5344827F08C73003F289A /* StopWatchLabTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		76B5343D27EB6722003F289A /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeTableViewCell.swift; sourceTree = "<group>"; };
 		76B5344627EEE7E3003F289A /* WorldTimeAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeAddViewController.swift; sourceTree = "<group>"; };
+		76B5344827F08C73003F289A /* StopWatchLabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchLabTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				76B5342027EA1771003F289A /* AppDelegate.swift */,
 				76B5342227EA1771003F289A /* SceneDelegate.swift */,
 				76B5342627EA1771003F289A /* Main.storyboard */,
+				76B5344827F08C73003F289A /* StopWatchLabTableViewCell.swift */,
 				76B5344627EEE7E3003F289A /* WorldTimeAddViewController.swift */,
 				76B5344227ECB2D4003F289A /* WorldTimeTableViewCell.swift */,
 				76B5343D27EB6722003F289A /* TimerViewController.swift */,
@@ -161,6 +164,7 @@
 				76B5342127EA1771003F289A /* AppDelegate.swift in Sources */,
 				76B5344727EEE7E3003F289A /* WorldTimeAddViewController.swift in Sources */,
 				76B5342B27EA1771003F289A /* Clock.xcdatamodeld in Sources */,
+				76B5344927F08C73003F289A /* StopWatchLabTableViewCell.swift in Sources */,
 				76B5343E27EB6722003F289A /* TimerViewController.swift in Sources */,
 				76B5343827EAE581003F289A /* WorldTimeViewController.swift in Sources */,
 				76B5343C27EAE5DC003F289A /* StopWatchViewController.swift in Sources */,

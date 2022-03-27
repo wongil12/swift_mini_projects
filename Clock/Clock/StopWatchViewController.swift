@@ -25,7 +25,12 @@ struct TimeSet {
     var milliSecond: String
 }
 
-class StopWatchViewController: UIViewController {
+struct LabSet {
+    var title: String
+    var time: String
+}
+
+class StopWatchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let timerSelector: Selector = #selector(StopWatchViewController.updateTimer)
     
     @IBOutlet var btnLeft: UIButton!
@@ -35,11 +40,16 @@ class StopWatchViewController: UIViewController {
     @IBOutlet var lblSecond: UILabel!
     @IBOutlet var lblMiiliSecond: UILabel!
     
+    @IBOutlet var tblLab: UITableView!
+    
+    
     
     var watchStatus: WatchStatus = .stop
     var leftStatus: LeftStatus = .disable
     var timer: Timer!
     var accuTime: Double = 0
+    
+    var labList = [LabSet]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +60,24 @@ class StopWatchViewController: UIViewController {
         changeControlBtn(.start)
         changeLeftBtn(.disable)
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return labList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:StopWatchLabTableViewCell = tableView.dequeueReusableCell(withIdentifier: "StopWatchCell", for: indexPath) as! StopWatchLabTableViewCell
+        
+        let index = self.labList.count - 1 - indexPath.row
+        cell.lblLabName.text = self.labList[index].title
+        cell.lblLabTime.text = self.labList[index].time
+        
+        return cell
     }
     
     // 시작 / 중지 버튼 클릭 이벤트
@@ -76,6 +104,10 @@ class StopWatchViewController: UIViewController {
     @IBAction func tchBtnLeft(_ sender: UIButton) {
         switch self.leftStatus {
         case .lab:
+            let timeSet = formatTime(self.accuTime)
+            let labData = LabSet(title: "랩 " + String(self.labList.count + 1), time: timeSet.minute + ":" + timeSet.second + ":" + timeSet.milliSecond)
+            self.labList.append(labData)
+            self.tblLab.reloadData()
             break
         case .reset:
             self.watchStatus = .stop
@@ -86,10 +118,14 @@ class StopWatchViewController: UIViewController {
             
             self.accuTime = 0
             
+            self.labList.removeAll()
+            
             changeTimeLbl(formatTime(self.accuTime))
             
             changeControlBtn(.start)
             changeLeftBtn(.disable)
+            
+            self.tblLab.reloadData()
             break
         case .disable:
             break
