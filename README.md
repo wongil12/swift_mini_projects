@@ -11,3 +11,8 @@
 > Start Date: `2022-03-22`<br />
 > 아이폰 기본 시계 어플 클론 코딩
 ---
+
+#### 3. 뉴스 Table
+- [ ] 완료
+> Start Date: `2022-03-28`<br />
+> URLSession 사용해서 News 목록 가져온 후 tableView에 뿌려주는 어플리케이션
