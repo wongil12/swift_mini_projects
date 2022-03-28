@@ -16,7 +16,7 @@ struct Article: Decodable {
     let title: String
     let description: String
     let url: String
-    let publishedAt: String
+    var publishedAt: String
 }
 
 func requestNewsList(_ url: URL, completion: @escaping([Article]?) -> ()) {

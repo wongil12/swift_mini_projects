@@ -20,7 +20,31 @@ class ViewController: UIViewController,  UITableViewDataSource {
         requestNewsList(url) {
             (data) in
             if let data = data {
-                self.newsList = data
+                
+                // 날짜 비교할 오늘 날짜 구하고 포매터 만들기
+                let nowDate = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let timeFormatter = DateFormatter()
+                timeFormatter.dateFormat = "hh:mm"
+                
+                let nowDateStr = dateFormatter.string(from: nowDate)
+                
+                // publishedAt가 오늘 날짜이면 hh:mm으로 보이고 오늘이 아니면 yyyy-MM-dd로 보이게
+                self.newsList = data.map({(newsData: Article) -> Article in
+                    var newArticle = newsData
+                    let pubDate = self.toDate(newArticle.publishedAt)!
+                    let pubDateStr = dateFormatter.string(from: pubDate)
+                    
+                    if pubDateStr == nowDateStr {
+                        let pubTimeStr = timeFormatter.string(from: pubDate)
+                        newArticle.publishedAt = pubTimeStr
+                    } else {
+                        newArticle.publishedAt = pubDateStr
+                    }
+                    
+                    return newArticle
+                })
             }
             DispatchQueue.main.async {
                 self.tblNews.reloadData()
@@ -40,6 +64,19 @@ class ViewController: UIViewController,  UITableViewDataSource {
         cell.lblDateTime.text = self.newsList[indexPath.row].publishedAt
         
         return cell
+    }
+    
+    // API에서 published 날짜를 yyyy-MM-dd'T'HH:mm:ss'Z'로 보내주는 것을 Date객체로 변환
+    func toDate(_ string: String) -> Date? {
+          
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        formatter1.locale = Locale(identifier: "ko")
+        
+        guard let date2 = formatter1.date(from: string) else {
+            return nil
+        }
+        return date2
     }
 
 }
