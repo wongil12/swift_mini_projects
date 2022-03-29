@@ -14,7 +14,9 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
+        Variables.scene = self
         
-        let bg = BackGround()        
+        let bg = BackGround()
+        let generator = BrickGenerator()
     }
 }
