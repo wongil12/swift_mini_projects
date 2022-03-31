@@ -19,7 +19,7 @@ class BrickGenerator {
             let y = Int(item.y) + Variables.dy
             
             Variables.backarrays[y][x] = 1
-            let xValue = x * brickValue.brickSize + Int(Variables.startPoint.x)
+            let xValue = x * brickValue.brickSize + Int(Variables.startPoint.x)x
             let yValue = y * brickValue.brickSize + Int(Variables.startPoint.y)
             let brick = SKSpriteNode()
             brick.color = brickValue.color
