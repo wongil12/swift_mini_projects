@@ -20,6 +20,8 @@
 		76B534D527F340D6003F289A /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534D427F340D6003F289A /* Variables.swift */; };
 		76B534D727F34141003F289A /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534D627F34141003F289A /* Brick.swift */; };
 		76B534D927F344C4003F289A /* BrickGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534D827F344C4003F289A /* BrickGenerator.swift */; };
+		76B534DD27F5E36A003F289A /* LeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534DC27F5E36A003F289A /* LeftButton.swift */; };
+		76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534DE27F5EA3C003F289A /* RightButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		76B534D427F340D6003F289A /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		76B534D627F34141003F289A /* Brick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
 		76B534D827F344C4003F289A /* BrickGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickGenerator.swift; sourceTree = "<group>"; };
+		76B534DC27F5E36A003F289A /* LeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButton.swift; sourceTree = "<group>"; };
+		76B534DE27F5EA3C003F289A /* RightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		76B5349C27F33ECE003F289A /* TetrisGame */ = {
 			isa = PBXGroup;
 			children = (
+				76B534DA27F5E34B003F289A /* Functions */,
 				76B534D327F340C0003F289A /* Variables */,
 				76B534D027F34007003F289A /* Background */,
 				76B5349D27F33ECE003F289A /* AppDelegate.swift */,
@@ -151,6 +156,15 @@
 				76B534D427F340D6003F289A /* Variables.swift */,
 			);
 			path = Variables;
+			sourceTree = "<group>";
+		};
+		76B534DA27F5E34B003F289A /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				76B534DC27F5E36A003F289A /* LeftButton.swift */,
+				76B534DE27F5EA3C003F289A /* RightButton.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +300,10 @@
 			files = (
 				76B534A427F33ECE003F289A /* GameScene.swift in Sources */,
 				76B534A627F33ECE003F289A /* GameViewController.swift in Sources */,
+				76B534DD27F5E36A003F289A /* LeftButton.swift in Sources */,
 				76B5349E27F33ECE003F289A /* AppDelegate.swift in Sources */,
 				76B534D927F344C4003F289A /* BrickGenerator.swift in Sources */,
+				76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */,
 				76B534D227F34018003F289A /* BackGround.swift in Sources */,
 				76B534D527F340D6003F289A /* Variables.swift in Sources */,
 				76B534D727F34141003F289A /* Brick.swift in Sources */,

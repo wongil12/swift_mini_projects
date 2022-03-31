@@ -14,12 +14,14 @@ class BrickGenerator {
     
     init() {
         let brick = brickValue.points
+        Variables.brickArrays = brick
+        Variables.brickNode.removeAll()
         for item in brick {
             let x = Int(item.x) + Variables.dx
             let y = Int(item.y) + Variables.dy
             
             Variables.backarrays[y][x] = 1
-            let xValue = x * brickValue.brickSize + Int(Variables.startPoint.x)x
+            let xValue = x * brickValue.brickSize + Int(Variables.startPoint.x)
             let yValue = y * brickValue.brickSize + Int(Variables.startPoint.y)
             let brick = SKSpriteNode()
             brick.color = brickValue.color
@@ -28,6 +30,7 @@ class BrickGenerator {
             brick.zPosition = brickValue.zPosition
             brick.position = CGPoint(x: xValue, y: -yValue)
             Variables.scene.addChild(brick)
+            Variables.brickNode.append(brick)
         }
     }
 }
