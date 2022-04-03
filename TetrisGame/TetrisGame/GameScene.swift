@@ -34,6 +34,8 @@ class GameScene: SKScene {
                 leftButton?.brickMoveLeft()
             } else if item.name == "right" {
                 rightButton?.brickMoveRight()
+            } else if item.name == "rotation" {
+                rotationButton?.brickRotation()
             }
         }
     }

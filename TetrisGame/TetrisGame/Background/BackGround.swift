@@ -26,19 +26,19 @@ class BackGround {
     
     func bg() {
         for i in 0..<row {
-            Variables.backarrays[col - 1][i] = 1
+            Variables.backarrays[col - 1][i] = 2
             Variables.scene.addChild(wall(x: i, y: col - 1))
         }
         for i in 0..<col-1 {
-            Variables.backarrays[i][0] = 1
+            Variables.backarrays[i][0] = 2
             Variables.scene.addChild(wall(x: 0, y: i))
         }
         for i in 0..<col-1 {
-            Variables.backarrays[i][row-1] = 1
+            Variables.backarrays[i][row-1] = 2
             Variables.scene.addChild(wall(x: row - 1, y: i))
         }
         for i in 0..<row {
-            Variables.backarrays[0][i] = 1
+            Variables.backarrays[0][i] = 2
             Variables.scene.addChild(wall(x: i, y: 0))
         }
     }
