@@ -39,6 +39,7 @@ class DownButton {
     func brickDown() {
         if isBrickDownable() {
             possibleDown()
+            anim()
         } else {
             imPossibleDown()
         }
