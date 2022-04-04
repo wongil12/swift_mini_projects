@@ -50,18 +50,14 @@ class LeftButton {
     }
     
     func isMovable() -> Bool {
-        var left = Variables.brickArrays[0]
-        for i in Variables.brickArrays {
-            if left.x > i.x {
-                left = i
+        
+        for item in Variables.brickArrays {
+            let x = Int(item.x) + Variables.dx
+            let y = Int(item.y) + Variables.dy
+            if Variables.backarrays[y][x - 1] == 2 {
+                return false
             }
         }
-        
-        let xValue = Int(left.x) + Variables.dx - 1
-        if Variables.backarrays[Variables.dy][xValue] != 0 {
-            return false
-        } else {
-            return true
-        }
+        return true
     }
 }

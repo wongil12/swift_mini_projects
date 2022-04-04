@@ -23,6 +23,7 @@
 		76B534DD27F5E36A003F289A /* LeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534DC27F5E36A003F289A /* LeftButton.swift */; };
 		76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534DE27F5EA3C003F289A /* RightButton.swift */; };
 		76B534E127F9AEE9003F289A /* RotationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534E027F9AEE9003F289A /* RotationButton.swift */; };
+		76B534E327FB2F2A003F289A /* DownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534E227FB2F2A003F289A /* DownButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		76B534DC27F5E36A003F289A /* LeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButton.swift; sourceTree = "<group>"; };
 		76B534DE27F5EA3C003F289A /* RightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButton.swift; sourceTree = "<group>"; };
 		76B534E027F9AEE9003F289A /* RotationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationButton.swift; sourceTree = "<group>"; };
+		76B534E227FB2F2A003F289A /* DownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				76B534DC27F5E36A003F289A /* LeftButton.swift */,
 				76B534DE27F5EA3C003F289A /* RightButton.swift */,
 				76B534E027F9AEE9003F289A /* RotationButton.swift */,
+				76B534E227FB2F2A003F289A /* DownButton.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				76B534D927F344C4003F289A /* BrickGenerator.swift in Sources */,
 				76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */,
 				76B534D227F34018003F289A /* BackGround.swift in Sources */,
+				76B534E327FB2F2A003F289A /* DownButton.swift in Sources */,
 				76B534E127F9AEE9003F289A /* RotationButton.swift in Sources */,
 				76B534D527F340D6003F289A /* Variables.swift in Sources */,
 				76B534D727F34141003F289A /* Brick.swift in Sources */,

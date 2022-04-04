@@ -10,9 +10,12 @@ import SpriteKit
 
 class BrickGenerator {
     
-    let brickValue = Variables.brickValue
-    
     init() {
+        Variables.dx = 4
+        Variables.dy = 2
+        Variables.brickValue = Brick().bricks()
+        
+        let brickValue = Variables.brickValue
         let brick = brickValue.points
         Variables.brickArrays = brick
         Variables.brickNode.removeAll()

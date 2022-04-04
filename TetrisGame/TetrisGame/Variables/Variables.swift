@@ -18,4 +18,5 @@ struct Variables {
     static var startPoint = CGPoint()
     static var brickArrays = [CGPoint]()
     static var brickNode = [SKSpriteNode]()
+    static var blockedArrays = [SKSpriteNode]()
 }
