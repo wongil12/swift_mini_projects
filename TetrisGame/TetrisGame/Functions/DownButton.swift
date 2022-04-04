@@ -94,7 +94,36 @@ class DownButton {
             let y = Int(item.y) + Variables.dy
             set.insert(y)
         }
-        
+        // 가져온 y 값으로 행 체크
+        for y in set.sorted() {
+            let yValue = y * Variables.brickValue.brickSize + Int(Variables.startPoint.y)
+            // 체크한 행이 0을 포함하지 않으면 (꽉 찼을 때)
+            if !Variables.backarrays[y].contains(0) {
+                Variables.backarrays.remove(at: y)
+                Variables.backarrays.insert([2,0,0,0,0,0,0,0,0,2], at: 0)
+                
+                for item in Variables.blockedArrays {
+                    // 같은 라인에 있는 경우
+                    if Int(item.position.y) == -yValue {
+                        if let removeItem = Variables.blockedArrays.firstIndex(of: item) {
+                            Variables.blockedArrays.remove(at: removeItem)
+                            var action = SKAction()
+                            action = SKAction.fadeOut(withDuration: 0.1)
+                            item.run(action) {
+                                item.removeFromParent()
+                            }
+                        }
+                    }
+                    // 현재 라인 보다 위에 있을 경우
+                    if Int(item.position.y) > -yValue {
+                        var action = SKAction()
+                        action = SKAction.moveBy(x: 0, y: -CGFloat(Variables.brickValue.brickSize), duration: 0.5)
+                        item.run(action)
+                    }
+                }
+                
+            }
+        }
         
         _ = BrickGenerator()
     }
