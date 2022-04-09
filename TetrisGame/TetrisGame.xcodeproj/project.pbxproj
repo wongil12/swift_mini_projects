@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		764343F42801B32D00A8FE72 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764343F32801B32D00A8FE72 /* GameOver.swift */; };
+		764343F62801B35B00A8FE72 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 764343F52801B35B00A8FE72 /* GameOver.sks */; };
 		76B5349E27F33ECE003F289A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5349D27F33ECE003F289A /* AppDelegate.swift */; };
 		76B534A427F33ECE003F289A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534A327F33ECE003F289A /* GameScene.swift */; };
 		76B534A627F33ECE003F289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534A527F33ECE003F289A /* GameViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		764343F32801B32D00A8FE72 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		764343F52801B35B00A8FE72 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 		76B5349A27F33ECE003F289A /* TetrisGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TetrisGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B5349D27F33ECE003F289A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B534A327F33ECE003F289A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -91,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764343F22801B30600A8FE72 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				76B534A327F33ECE003F289A /* GameScene.swift */,
+				764343F32801B32D00A8FE72 /* GameOver.swift */,
+				764343F52801B35B00A8FE72 /* GameOver.sks */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		76B5349127F33ECD003F289A = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +128,11 @@
 		76B5349C27F33ECE003F289A /* TetrisGame */ = {
 			isa = PBXGroup;
 			children = (
+				764343F22801B30600A8FE72 /* Scene */,
 				76B534DA27F5E34B003F289A /* Functions */,
 				76B534D327F340C0003F289A /* Variables */,
 				76B534D027F34007003F289A /* Background */,
 				76B5349D27F33ECE003F289A /* AppDelegate.swift */,
-				76B534A327F33ECE003F289A /* GameScene.swift */,
 				76B534A527F33ECE003F289A /* GameViewController.swift */,
 				76B534A727F33ECE003F289A /* Main.storyboard */,
 				76B534AA27F33ED0003F289A /* Assets.xcassets */,
@@ -278,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B534A927F33ECE003F289A /* Main.storyboard in Resources */,
+				764343F62801B35B00A8FE72 /* GameOver.sks in Resources */,
 				76B534AB27F33ED0003F289A /* Assets.xcassets in Resources */,
 				76B534AE27F33ED0003F289A /* LaunchScreen.storyboard in Resources */,
 			);
@@ -307,6 +322,7 @@
 				76B534A427F33ECE003F289A /* GameScene.swift in Sources */,
 				76B534A627F33ECE003F289A /* GameViewController.swift in Sources */,
 				76B534DD27F5E36A003F289A /* LeftButton.swift in Sources */,
+				764343F42801B32D00A8FE72 /* GameOver.swift in Sources */,
 				76B5349E27F33ECE003F289A /* AppDelegate.swift in Sources */,
 				76B534D927F344C4003F289A /* BrickGenerator.swift in Sources */,
 				76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */,
