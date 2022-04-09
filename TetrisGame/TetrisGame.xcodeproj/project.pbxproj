@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		764343F42801B32D00A8FE72 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764343F32801B32D00A8FE72 /* GameOver.swift */; };
 		764343F62801B35B00A8FE72 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 764343F52801B35B00A8FE72 /* GameOver.sks */; };
+		764343F82801B5B100A8FE72 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764343F72801B5B100A8FE72 /* StopButton.swift */; };
 		76B5349E27F33ECE003F289A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5349D27F33ECE003F289A /* AppDelegate.swift */; };
 		76B534A427F33ECE003F289A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534A327F33ECE003F289A /* GameScene.swift */; };
 		76B534A627F33ECE003F289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534A527F33ECE003F289A /* GameViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		764343F32801B32D00A8FE72 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		764343F52801B35B00A8FE72 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
+		764343F72801B5B100A8FE72 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		76B5349A27F33ECE003F289A /* TetrisGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TetrisGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B5349D27F33ECE003F289A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B534A327F33ECE003F289A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				76B534DE27F5EA3C003F289A /* RightButton.swift */,
 				76B534E027F9AEE9003F289A /* RotationButton.swift */,
 				76B534E227FB2F2A003F289A /* DownButton.swift */,
+				764343F72801B5B100A8FE72 /* StopButton.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				76B534A427F33ECE003F289A /* GameScene.swift in Sources */,
 				76B534A627F33ECE003F289A /* GameViewController.swift in Sources */,
+				764343F82801B5B100A8FE72 /* StopButton.swift in Sources */,
 				76B534DD27F5E36A003F289A /* LeftButton.swift in Sources */,
 				764343F42801B32D00A8FE72 /* GameOver.swift in Sources */,
 				76B5349E27F33ECE003F289A /* AppDelegate.swift in Sources */,

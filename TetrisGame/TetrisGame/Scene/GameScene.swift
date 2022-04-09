@@ -14,6 +14,7 @@ class GameScene: SKScene {
     var rightButton: RightButton?
     var rotationButton: RotationButton?
     var downButton: DownButton?
+    var stopButton: StopButton?
     var updateTime = 0.0
     
     override func didMove(to view: SKView) {
@@ -26,6 +27,7 @@ class GameScene: SKScene {
         rightButton = RightButton()
         rotationButton = RotationButton()
         downButton = DownButton()
+        stopButton = StopButton()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -34,7 +36,9 @@ class GameScene: SKScene {
         }
         if currentTime - updateTime > 1 {
             updateTime = currentTime
-            downButton?.brickDown()
+            if !Variables.isPause {
+                downButton?.brickDown()
+            }
         }
     }
     
@@ -53,6 +57,8 @@ class GameScene: SKScene {
                 while (downButton?.isBrickDownable())! {
                     downButton?.brickDown()
                 }
+            } else if (item.name == "stop") {
+                stopButton?.brickStop()
             }
         }
     }
