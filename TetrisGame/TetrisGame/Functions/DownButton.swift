@@ -128,6 +128,7 @@ class DownButton {
         
         if isGameOver(deadLine: Variables.dy) {
             // Create New Block
+            NextBricks().nextBrickMoveLeft()
             _ = BrickGenerator()
         }
     }

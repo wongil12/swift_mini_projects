@@ -13,7 +13,7 @@ class BrickGenerator {
     init() {
         Variables.dx = 4
         Variables.dy = 2
-        Variables.brickValue = Brick().bricks()
+        Variables.brickValue = Variables.newBrickArray[0]
         
         let brickValue = Variables.brickValue
         let brick = brickValue.points

@@ -21,6 +21,7 @@ class GameScene: SKScene {
         Variables.scene = self
         
         _ = BackGround()
+        NextBricks().addBrick()
         _ = BrickGenerator()
         
         leftButton = LeftButton()
