@@ -31,6 +31,7 @@ class BrickGenerator {
             brick.texture = SKTexture(imageNamed: brickValue.brickName)
             brick.size = CGSize(width: brickValue.brickSize - Variables.gab, height: brickValue.brickSize - Variables.gab)
             brick.setScale(2.7)
+            brick.lightingBitMask = 0b0001
             brick.name = brickValue.brickName
             brick.zPosition = brickValue.zPosition
             brick.position = CGPoint(x: xValue, y: -yValue)

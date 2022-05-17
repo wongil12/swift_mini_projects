@@ -35,6 +35,16 @@ class GameScene: SKScene {
         downButton = DownButton()
         stopButton = StopButton()
         sounds = Sounds()
+        
+        lightEffect()
+    }
+    
+    func lightEffect() {
+        let light = SKLightNode()
+        light.position = CGPoint(x: Int(view!.frame.width) / 2, y: -100)
+        light.ambientColor = .white
+        light.categoryBitMask = 0b0001
+        addChild(light)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -67,6 +77,7 @@ class GameScene: SKScene {
                 while (downButton?.isBrickDownable())! {
                     downButton?.brickDown()
                     sounds?.buttonSounds(buttonName: "down")
+                    downButton?.anim()
                 }
             } else if (item.name == "stop") {
                 stopButton?.brickStop()

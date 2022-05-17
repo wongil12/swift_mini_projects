@@ -39,7 +39,6 @@ class DownButton {
     func brickDown() {
         if isBrickDownable() {
             possibleDown()
-            anim()
         } else {
             imPossibleDown()
         }
@@ -101,7 +100,14 @@ class DownButton {
             // 체크한 행이 0을 포함하지 않으면 (꽉 찼을 때)
             if !Variables.backarrays[y].contains(0) {
                 Variables.backarrays.remove(at: y)
-                Variables.backarrays.insert([2,0,0,0,0,0,0,0,0,2], at: 1)
+                
+                var rowArray = Array<Int>()
+                for _ in 0..<Variables.row {
+                    rowArray.append(0)
+                }
+                rowArray[rowArray.startIndex] = 2
+                rowArray[rowArray.endIndex - 1] = 2
+                Variables.backarrays.insert(rowArray, at: 1)
                 
                 Variables.blockedArrays.first?.run(SKAction.playSoundFileNamed("delete.wav", waitForCompletion: false))
                 

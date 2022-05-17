@@ -13,7 +13,7 @@ class Brick {
     struct Bricks {
         var color = UIColor()
         var points = [CGPoint]()
-        let brickSize = 35
+        let brickSize = 30
         let zPosition = CGFloat(1)
         var brickName = String()
     }
