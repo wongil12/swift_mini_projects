@@ -28,6 +28,13 @@
 		76B534DF27F5EA3C003F289A /* RightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534DE27F5EA3C003F289A /* RightButton.swift */; };
 		76B534E127F9AEE9003F289A /* RotationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534E027F9AEE9003F289A /* RotationButton.swift */; };
 		76B534E327FB2F2A003F289A /* DownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B534E227FB2F2A003F289A /* DownButton.swift */; };
+		76CA37CF2833DBB400563AB3 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA37CE2833DBB400563AB3 /* Sounds.swift */; };
+		76CA37D62833DBEE00563AB3 /* move.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37D12833DBED00563AB3 /* move.mp3 */; };
+		76CA37D72833DBEE00563AB3 /* rotation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37D22833DBED00563AB3 /* rotation.mp3 */; };
+		76CA37D82833DBEE00563AB3 /* bg_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37D32833DBED00563AB3 /* bg_sound.mp3 */; };
+		76CA37D92833DBEE00563AB3 /* delete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37D42833DBEE00563AB3 /* delete.wav */; };
+		76CA37DA2833DBEE00563AB3 /* down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37D52833DBEE00563AB3 /* down.mp3 */; };
+		76CA37DC2833DFCF00563AB3 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76CA37DB2833DFCE00563AB3 /* Fire.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		76B534DE27F5EA3C003F289A /* RightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButton.swift; sourceTree = "<group>"; };
 		76B534E027F9AEE9003F289A /* RotationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationButton.swift; sourceTree = "<group>"; };
 		76B534E227FB2F2A003F289A /* DownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownButton.swift; sourceTree = "<group>"; };
+		76CA37CE2833DBB400563AB3 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		76CA37D12833DBED00563AB3 /* move.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = move.mp3; sourceTree = "<group>"; };
+		76CA37D22833DBED00563AB3 /* rotation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rotation.mp3; sourceTree = "<group>"; };
+		76CA37D32833DBED00563AB3 /* bg_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_sound.mp3; sourceTree = "<group>"; };
+		76CA37D42833DBEE00563AB3 /* delete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = delete.wav; sourceTree = "<group>"; };
+		76CA37D52833DBEE00563AB3 /* down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = down.mp3; sourceTree = "<group>"; };
+		76CA37DB2833DFCE00563AB3 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,8 @@
 		76B5349C27F33ECE003F289A /* TetrisGame */ = {
 			isa = PBXGroup;
 			children = (
+				76CA37DD2833E04400563AB3 /* emitter */,
+				76CA37D02833DBE400563AB3 /* sounds */,
 				764343F22801B30600A8FE72 /* Scene */,
 				76B534DA27F5E34B003F289A /* Functions */,
 				76B534D327F340C0003F289A /* Variables */,
@@ -189,8 +205,29 @@
 				76B534E227FB2F2A003F289A /* DownButton.swift */,
 				764343F72801B5B100A8FE72 /* StopButton.swift */,
 				764343F9280317E800A8FE72 /* NextBricks.swift */,
+				76CA37CE2833DBB400563AB3 /* Sounds.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		76CA37D02833DBE400563AB3 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				76CA37D32833DBED00563AB3 /* bg_sound.mp3 */,
+				76CA37D42833DBEE00563AB3 /* delete.wav */,
+				76CA37D52833DBEE00563AB3 /* down.mp3 */,
+				76CA37D12833DBED00563AB3 /* move.mp3 */,
+				76CA37D22833DBED00563AB3 /* rotation.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		76CA37DD2833E04400563AB3 /* emitter */ = {
+			isa = PBXGroup;
+			children = (
+				76CA37DB2833DFCE00563AB3 /* Fire.sks */,
+			);
+			path = emitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +334,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CA37D72833DBEE00563AB3 /* rotation.mp3 in Resources */,
+				76CA37D92833DBEE00563AB3 /* delete.wav in Resources */,
+				76CA37DA2833DBEE00563AB3 /* down.mp3 in Resources */,
+				76CA37DC2833DFCF00563AB3 /* Fire.sks in Resources */,
 				76B534A927F33ECE003F289A /* Main.storyboard in Resources */,
+				76CA37D82833DBEE00563AB3 /* bg_sound.mp3 in Resources */,
+				76CA37D62833DBEE00563AB3 /* move.mp3 in Resources */,
 				764343F62801B35B00A8FE72 /* GameOver.sks in Resources */,
 				76B534AB27F33ED0003F289A /* Assets.xcassets in Resources */,
 				76B534AE27F33ED0003F289A /* LaunchScreen.storyboard in Resources */,
@@ -337,6 +380,7 @@
 				76B534D227F34018003F289A /* BackGround.swift in Sources */,
 				76B534E327FB2F2A003F289A /* DownButton.swift in Sources */,
 				76B534E127F9AEE9003F289A /* RotationButton.swift in Sources */,
+				76CA37CF2833DBB400563AB3 /* Sounds.swift in Sources */,
 				76B534D527F340D6003F289A /* Variables.swift in Sources */,
 				76B534D727F34141003F289A /* Brick.swift in Sources */,
 			);
