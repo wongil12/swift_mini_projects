@@ -16,6 +16,7 @@
 		C49E14D429335F4C0053EEB7 /* InstagramCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14D329335F4C0053EEB7 /* InstagramCloneUITests.swift */; };
 		C49E14D629335F4C0053EEB7 /* InstagramCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14D529335F4C0053EEB7 /* InstagramCloneUITestsLaunchTests.swift */; };
 		C49E14E3293366170053EEB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E2293366170053EEB7 /* LoginViewController.swift */; };
+		C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E4293368C20053EEB7 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C49E14D329335F4C0053EEB7 /* InstagramCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneUITests.swift; sourceTree = "<group>"; };
 		C49E14D529335F4C0053EEB7 /* InstagramCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C49E14E2293366170053EEB7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C49E14E4293368C20053EEB7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				C49E14B229335F4C0053EEB7 /* AppDelegate.swift */,
 				C49E14B429335F4C0053EEB7 /* SceneDelegate.swift */,
 				C49E14B829335F4C0053EEB7 /* Main.storyboard */,
+				C49E14E4293368C20053EEB7 /* RegisterViewController.swift */,
 				C49E14E2293366170053EEB7 /* LoginViewController.swift */,
 				C49E14BB29335F4C0053EEB7 /* Assets.xcassets */,
 				C49E14BD29335F4C0053EEB7 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				C49E14E3293366170053EEB7 /* LoginViewController.swift in Sources */,
 				C49E14B329335F4C0053EEB7 /* AppDelegate.swift in Sources */,
 				C49E14B529335F4C0053EEB7 /* SceneDelegate.swift in Sources */,
+				C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
