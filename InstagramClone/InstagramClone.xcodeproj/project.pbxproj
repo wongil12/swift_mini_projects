@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4123F3929A9E51100EADDD7 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4123F3829A9E51100EADDD7 /* Color+Extension.swift */; };
+		C4123F3B29A9E7D200EADDD7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4123F3A29A9E7D200EADDD7 /* UIView+Extension.swift */; };
+		C4123F3D29A9E8A200EADDD7 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4123F3C29A9E8A200EADDD7 /* UIViewController+Extension.swift */; };
 		C49E14B329335F4C0053EEB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14B229335F4C0053EEB7 /* AppDelegate.swift */; };
 		C49E14B529335F4C0053EEB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14B429335F4C0053EEB7 /* SceneDelegate.swift */; };
 		C49E14BA29335F4C0053EEB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49E14B829335F4C0053EEB7 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4123F3829A9E51100EADDD7 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		C4123F3A29A9E7D200EADDD7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C4123F3C29A9E8A200EADDD7 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C49E14AF29335F4C0053EEB7 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49E14B229335F4C0053EEB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49E14B429335F4C0053EEB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +112,12 @@
 				C49E14B829335F4C0053EEB7 /* Main.storyboard */,
 				C49E14E4293368C20053EEB7 /* RegisterViewController.swift */,
 				C49E14E2293366170053EEB7 /* LoginViewController.swift */,
+				C4123F3C29A9E8A200EADDD7 /* UIViewController+Extension.swift */,
 				C49E14BB29335F4C0053EEB7 /* Assets.xcassets */,
 				C49E14BD29335F4C0053EEB7 /* LaunchScreen.storyboard */,
 				C49E14C029335F4C0053EEB7 /* Info.plist */,
+				C4123F3829A9E51100EADDD7 /* Color+Extension.swift */,
+				C4123F3A29A9E7D200EADDD7 /* UIView+Extension.swift */,
 			);
 			path = InstagramClone;
 			sourceTree = "<group>";
@@ -261,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4123F3B29A9E7D200EADDD7 /* UIView+Extension.swift in Sources */,
 				C49E14E3293366170053EEB7 /* LoginViewController.swift in Sources */,
+				C4123F3929A9E51100EADDD7 /* Color+Extension.swift in Sources */,
 				C49E14B329335F4C0053EEB7 /* AppDelegate.swift in Sources */,
+				C4123F3D29A9E8A200EADDD7 /* UIViewController+Extension.swift in Sources */,
 				C49E14B529335F4C0053EEB7 /* SceneDelegate.swift in Sources */,
 				C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */,
 			);
