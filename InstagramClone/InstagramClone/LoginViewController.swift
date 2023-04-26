@@ -11,8 +11,10 @@ class LoginViewController: UIViewController {
     
     var email = String()
     var password = String()
+    var userInfo: UserInfo?
 
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +26,21 @@ class LoginViewController: UIViewController {
     @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.email = text
+        validateLoginField()
     }
     
     @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.password = text
+        validateLoginField()
     }
     
     @IBAction func loginButtonDidTap(_ sender: UIButton) {
+        guard let userInfo = self.userInfo else { return }
+        
+        if userInfo.email == self.email && userInfo.password == self.password {
+            print("Move to next page")
+        }
     }
     
     @IBAction func registerButtonDidTap(_ sender: UIButton) {
@@ -39,9 +48,18 @@ class LoginViewController: UIViewController {
         
         let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
         
-//        self.present(registerViewController, animated: true, completion: nil)
-        
         self.navigationController?.pushViewController(registerViewController, animated: true)
+        
+        // ARC 관련 공부
+        registerViewController.userInfo = { [weak self] userInfo in
+            self?.userInfo = userInfo
+        }
+    }
+    
+    private func validateLoginField() {
+        let isValid = self.email.isValidEmail() && self.password.count > 0
+        self.loginButton.backgroundColor = isValid ? .facebookColor : .disabledButtonColor
+        self.loginButton.isEnabled = isValid
     }
     
     private func setupAttribute() {

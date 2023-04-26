@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yV8-8K-JNy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yV8-8K-JNy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,7 +28,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="psy-eV-wmL"/>
+                                    <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="hSF-ky-P3e"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-r0-xCY">
@@ -37,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="emailTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="UxK-aI-dYp"/>
+                                    <action selector="emailTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="GHa-cj-KwH"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 잊으셨나요?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-9W-UgO">
@@ -52,10 +51,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="9dS-PS-cqR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="로그인">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="corderRadius">
                                         <real key="value" value="5"/>
@@ -86,7 +85,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaD-dc-gMk">
-                                <rect key="frame" x="127" y="621" width="160.5" height="34"/>
+                                <rect key="frame" x="128.5" y="621" width="157" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="f.square.fill" catalog="system" title="Facebook으로 로그인">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="0.0"/>
@@ -94,17 +93,17 @@
                                 </buttonConfiguration>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-GJ-LIc">
-                                <rect key="frame" x="30" y="826" width="354" height="1"/>
+                                <rect key="frame" x="30" y="825" width="354" height="1"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="piR-TD-rp3"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuY-1E-mQ8">
-                                <rect key="frame" x="126" y="842" width="162" height="29"/>
+                                <rect key="frame" x="120.5" y="841" width="173" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정이 없으신가요? 가입하기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -151,6 +150,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zPw-nc-SCr"/>
                     <connections>
+                        <outlet property="loginButton" destination="4k3-qW-7cB" id="pgo-1e-lkg"/>
                         <outlet property="registerButton" destination="OuY-1E-mQ8" id="Gbt-1i-CGd"/>
                     </connections>
                 </viewController>
@@ -167,16 +167,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_catstagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="PSl-Zh-zQi">
-                                <rect key="frame" x="87" y="48" width="240" height="96"/>
+                                <rect key="frame" x="87" y="88" width="240" height="96"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구들의 사진과 동영상을 보려면 가입하세요" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RU-iO-obh">
-                                <rect key="frame" x="123" y="164" width="168.5" height="31.5"/>
+                                <rect key="frame" x="123" y="204" width="168.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-Sw-oJK">
-                                <rect key="frame" x="10" y="220.5" width="394" height="35"/>
+                                <rect key="frame" x="10" y="260.5" width="394" height="35"/>
                                 <color key="backgroundColor" name="facebookColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="65K-NH-lMy"/>
@@ -193,27 +193,27 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="또는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-2m-p98">
-                                <rect key="frame" x="196" y="290.5" width="22.5" height="16"/>
+                                <rect key="frame" x="196" y="330.5" width="22.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njv-JD-uIx">
-                                <rect key="frame" x="10" y="298" width="171" height="1"/>
+                                <rect key="frame" x="10" y="338" width="171" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="owX-AG-ia7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70D-M7-498">
-                                <rect key="frame" x="233.5" y="298" width="170.5" height="1"/>
+                                <rect key="frame" x="233.5" y="338" width="170.5" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="meO-DG-3tk"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aoP-xh-ahq">
-                                <rect key="frame" x="10" y="374" width="394" height="206"/>
+                                <rect key="frame" x="10" y="414" width="394" height="206"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="휴대폰 번호 또는 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WsQ-Rb-W5C">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
@@ -238,7 +238,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du1-We-dkL">
-                                <rect key="frame" x="10" y="605" width="394" height="45"/>
+                                <rect key="frame" x="10" y="645" width="394" height="45"/>
                                 <color key="backgroundColor" name="disabledButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NHb-2X-BFl"/>
@@ -252,19 +252,23 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonDidTap:" destination="n7N-em-GOC" eventType="touchUpInside" id="GsK-a0-a8d"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-dU-SnT">
-                                <rect key="frame" x="10" y="810.5" width="394" height="1"/>
+                                <rect key="frame" x="10" y="808" width="394" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="nBV-Bd-HUg"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-6b-Xye">
-                                <rect key="frame" x="136.5" y="834.5" width="141" height="27.5"/>
+                                <rect key="frame" x="126.5" y="832" width="161.5" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정이 있으신가요? 로그인">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -302,6 +306,15 @@
                             <constraint firstItem="VwU-Tl-9K6" firstAttribute="trailing" secondItem="Du1-We-dkL" secondAttribute="trailing" constant="10" id="xrb-Qe-Pyw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HM3-dU-GtV">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.backward" catalog="system" id="gke-lR-YsF">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="n7N-em-GOC" id="dUY-Ag-DJu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="WsQ-Rb-W5C" id="75W-I7-vch"/>
                         <outlet property="nameTextField" destination="QGs-zV-cHy" id="7Pb-l0-YZ9"/>
@@ -321,7 +334,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yV8-8K-JNy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hzb-ge-dtu">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -335,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <namedColor name="AccentColor">

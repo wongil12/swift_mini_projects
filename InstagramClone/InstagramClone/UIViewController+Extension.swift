@@ -11,7 +11,7 @@ extension UIViewController {
     func generateButtonAttribute(_ button: UIButton, texts: String..., fonts: UIFont..., colors: UIColor...) -> NSMutableAttributedString {
         guard let wholeText = button.titleLabel?.text else {fatalError("No text in button")}
         
-        let customFonts:[UIFont] = fonts
+        let customFonts: [UIFont] = fonts
         
         let customTextRanges = texts.indices.map {index in
             (wholeText as NSString).range(of: texts[index])
