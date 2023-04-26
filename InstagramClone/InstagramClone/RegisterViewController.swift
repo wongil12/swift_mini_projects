@@ -119,7 +119,7 @@ class RegisterViewController: UIViewController {
 // Regex
 extension String {
     func isValidPassword() -> Bool {
-        let regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+        let regex = "^(?=.*\\w)(?=.*\\d)(?=.*[$@$!%*?&])[\\w\\d$@$!%*?&]{8,}"
         let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regex)
         
         return passwordValidation.evaluate(with: self)
