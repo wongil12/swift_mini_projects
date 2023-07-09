@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setupAttribute() {
-        let text1 = "게정이 없으신가요?"
+        let text1 = "계정이 없으신가요?"
         let text2 = "가입하기"
         
         let font1 = UIFont.systemFont(ofSize: 13)

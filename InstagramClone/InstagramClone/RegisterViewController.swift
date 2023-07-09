@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UIGestureRecognizerDelegate {
     // MARK - Properties
     var email: String = ""
     var name: String = ""
@@ -65,7 +65,11 @@ class RegisterViewController: UIViewController {
         setupAttribute()
         setupTextField()
         
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return navigationController?.viewControllers.count ?? 0 > 1
     }
     
     // MARK - Actionse
@@ -126,7 +130,7 @@ class RegisterViewController: UIViewController {
     }
     
     private func setupAttribute() {
-        let text1 = "게정이 있으신가요?"
+        let text1 = "계정이 있으신가요?"
         let text2 = "로그인"
         
         let font1 = UIFont.systemFont(ofSize: 13)
