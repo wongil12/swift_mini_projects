@@ -19,6 +19,8 @@
 		C49E14E3293366170053EEB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E2293366170053EEB7 /* LoginViewController.swift */; };
 		C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E4293368C20053EEB7 /* RegisterViewController.swift */; };
 		C4EE33DD2A5AC8BA00940310 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */; };
+		C4EE33E72A5ACBFC00940310 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE33E52A5ACBFC00940310 /* FeedTableViewCell.swift */; };
+		C4EE33E82A5ACBFC00940310 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EE33E62A5ACBFC00940310 /* FeedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C49E14E2293366170053EEB7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C49E14E4293368C20053EEB7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C4EE33E52A5ACBFC00940310 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		C4EE33E62A5ACBFC00940310 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +127,19 @@
 		C4EE33DB2A5AC8A900940310 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C4EE33DE2A5ACAD000940310 /* Cell */,
 				C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C4EE33DE2A5ACAD000940310 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C4EE33E52A5ACBFC00940310 /* FeedTableViewCell.swift */,
+				C4EE33E62A5ACBFC00940310 /* FeedTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49E14BF29335F4C0053EEB7 /* LaunchScreen.storyboard in Resources */,
+				C4EE33E82A5ACBFC00940310 /* FeedTableViewCell.xib in Resources */,
 				C49E14BC29335F4C0053EEB7 /* Assets.xcassets in Resources */,
 				C49E14BA29335F4C0053EEB7 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +283,7 @@
 				C4123F3D29A9E8A200EADDD7 /* UIViewController+Extension.swift in Sources */,
 				C49E14B529335F4C0053EEB7 /* SceneDelegate.swift in Sources */,
 				C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */,
+				C4EE33E72A5ACBFC00940310 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
