@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
     
     var email = String()
     var password = String()
-    var userInfo: UserInfo?
+    var userInfo: UserInfo? = UserInfo(email: "bob.kim@mvlchain.io", name: "wongil", nickname: "wongil", password: "1q2w3e4R!")
 
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAttribute()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
@@ -39,7 +37,9 @@ class LoginViewController: UIViewController {
         guard let userInfo = self.userInfo else { return }
         
         if userInfo.email == self.email && userInfo.password == self.password {
-            print("Move to next page")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }
     }
     

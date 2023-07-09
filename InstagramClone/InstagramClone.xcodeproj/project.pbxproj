@@ -18,6 +18,7 @@
 		C49E14BF29335F4C0053EEB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49E14BD29335F4C0053EEB7 /* LaunchScreen.storyboard */; };
 		C49E14E3293366170053EEB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E2293366170053EEB7 /* LoginViewController.swift */; };
 		C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E14E4293368C20053EEB7 /* RegisterViewController.swift */; };
+		C4EE33DD2A5AC8BA00940310 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C49E14CF29335F4C0053EEB7 /* InstagramCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49E14E2293366170053EEB7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C49E14E4293368C20053EEB7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		C49E14B129335F4C0053EEB7 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				C4EE33DB2A5AC8A900940310 /* Home */,
 				C49E14B229335F4C0053EEB7 /* AppDelegate.swift */,
 				C49E14B429335F4C0053EEB7 /* SceneDelegate.swift */,
 				C49E14B829335F4C0053EEB7 /* Main.storyboard */,
@@ -115,6 +118,14 @@
 				C4123F3A29A9E7D200EADDD7 /* UIView+Extension.swift */,
 			);
 			path = InstagramClone;
+			sourceTree = "<group>";
+		};
+		C4EE33DB2A5AC8A900940310 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C4EE33DC2A5AC8BA00940310 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				C4123F3929A9E51100EADDD7 /* Color+Extension.swift in Sources */,
 				C49E14B329335F4C0053EEB7 /* AppDelegate.swift in Sources */,
 				76663A8729F98611001A2673 /* UserInfo.swift in Sources */,
+				C4EE33DD2A5AC8BA00940310 /* HomeViewController.swift in Sources */,
 				C4123F3D29A9E8A200EADDD7 /* UIViewController+Extension.swift in Sources */,
 				C49E14B529335F4C0053EEB7 /* SceneDelegate.swift in Sources */,
 				C49E14E5293368C20053EEB7 /* RegisterViewController.swift in Sources */,
